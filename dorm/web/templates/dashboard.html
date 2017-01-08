@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <h1>Welcome, {{ username }}!</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Value</td>
+                </tr>
+            </thead>
+            <tbody>
+{% for user in userlist %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.val }}</td>
+                </tr>
+{% endfor %}
+            </tbody>
+        </table>
+        <a href="/add">Add new</a>
+        <table>
+            <thead>
+                <tr>
+                    <td>Time</td>
+                    <td>Username</td>
+                    <td>Value</td>
+                    <td>Comment</td>
+                </tr>
+            </thead>
+            <tbody>
+{% for l in takelist %}
+                <tr>
+                    <td>{{ l.time }}</td>
+                    <td>{{ l.username }}</td>
+                    <td>{{ l.val }}</td>
+                    <td>{{ l.comment }}</td>
+                </tr>
+{% endfor %}
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <td>Time</td>
+                    <td>Username</td>
+                    <td>Value</td>
+                    <td>Comment</td>
+                </tr>
+            </thead>
+            <tbody>
+{% for l in getlist %}
+                <tr>
+                    <td>{{ l.time }}</td>
+                    <td>{{ l.username }}</td>
+                    <td>{{ l.val }}</td>
+                    <td>{{ l.comment }}</td>
+                </tr>
+{% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
